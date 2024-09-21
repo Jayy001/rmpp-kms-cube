@@ -64,9 +64,3 @@ kmscube # No gears
 ## Ghosting
 * During running, ghosting will occur a lot
 * The white sphere will eventually go away with enough refreshes (can force this by sleeping the device)
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 517beba0784b1fe1008e63ea634e7667bf5d05c0
-
