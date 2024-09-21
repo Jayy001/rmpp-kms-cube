@@ -51,12 +51,12 @@ ninja -C build install
 ```
 
 ## Running KMSCube
-* Make sure that xochitl is disabled (you'll have to do this outside the chroot)
+* Make sure that xochitl is disabled (you'll have to do this **outside the chroot**)
 ```
 systemctl stop xochitl # To stop
 systemctl start xochitl # To start
 ```
-* Then to run
+* Then to run (this should be **inside the chroot**)
 ```
 kmscube --gears --mode=rgba --nonblocking --surfaceless --format=RG16 # Full command
 kmscube # No gears
