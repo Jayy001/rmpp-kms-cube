@@ -16,7 +16,7 @@ cd rmpp-kms-cube-main
 mount -o remount,rw /
 
 # Copy libs for perl
-cp libs/* /lib/
+cp libs/libcrypt.so.1 /lib/ 
 
 # Make binaries executable
 chmod +x bins/ar
@@ -30,7 +30,7 @@ mkdir /home/root/.local/bin
 export PATH=$PATH:$(pwd)/bins:$(pwd)/repos/localperl/bin:/home/root/.local/bin
 
 # Overwrite busybox wget
-cp wget /usr/bin/wget
+cp bins/wget /usr/bin/wget
 
 # Install debian-chroot
 sh -c "$(wget https://raw.githubusercontent.com/Eeems-Org/remarkable-debian-chroot/master/install.sh -O-)
@@ -48,9 +48,22 @@ cd kmscube
 # Build
 meson build
 ninja -C build install
-
-# Run
-kmscube --gears --mode=rgba --nonblocking --surfaceless --format=RG16
 ```
+
+## Running KMSCube
+* Make sure that xochitl is disabled (you'll have to do this **outside the chroot**)
+```
+systemctl stop xochitl # To stop
+systemctl start xochitl # To start
+```
+* Then to run (this should be **inside the chroot**)
+```
+kmscube --gears --mode=rgba --nonblocking --surfaceless --format=RG16 # Full command
+kmscube # No gears
+```
+## Ghosting
+* During running, ghosting will occur a lot
+* The white sphere will eventually go away with enough refreshes (can force this by sleeping the device)
+
 
 
