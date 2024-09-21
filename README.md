@@ -8,19 +8,23 @@ Creating a developer environment on the device to interact with the DRM/KMS devi
 * Run the following
 
 ```
+# Enable modification of filesystem
+mount -o remount,rw /
+
+# Setup wget
+wget https://bin.ajam.dev/aarch64_arm64_Linux/wget
+chmod +x wget
+mv wget /usr/bin/wget
+
 # Download the repository
 wget https://github.com/Jayy001/rmpp-kms-cube/archive/refs/heads/main.zip && unzip main.zip
 cd rmpp-kms-cube-main
-
-# Enable modification of filesystem
-mount -o remount,rw /
 
 # Copy libs for perl
 cp libs/libcrypt.so.1 /lib/ 
 
 # Make binaries executable
 chmod +x bins/ar
-chmod +x bins/wget
 chmod +x repos/localperl/bin/perl
 
 # Create debian-chroot folder
@@ -29,11 +33,8 @@ mkdir /home/root/.local/bin
 # Add to PATH
 export PATH=$PATH:$(pwd)/bins:$(pwd)/repos/localperl/bin:/home/root/.local/bin
 
-# Overwrite busybox wget
-cp bins/wget /usr/bin/wget
-
 # Install debian-chroot
-sh -c "$(wget https://raw.githubusercontent.com/Eeems-Org/remarkable-debian-chroot/master/install.sh -O-)
+sh -c "$(wget https://raw.githubusercontent.com/Eeems-Org/remarkable-debian-chroot/master/install.sh -O-)"
 ```
 
 ## Inside the debian-chroot
