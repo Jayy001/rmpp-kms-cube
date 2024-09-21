@@ -16,7 +16,7 @@ cd rmpp-kms-cube-main
 mount -o remount,rw /
 
 # Copy libs for perl
-cp libs/* /lib/
+## cp libs/* /lib/ ## DON'T RUN THIS
 
 # Make binaries executable
 chmod +x bins/ar
