@@ -1,3 +1,6 @@
+<p align="center">
+<img src="media/demo.gif">
+
 # Instructions
 
 Creating a developer environment on the device to interact with the DRM/KMS device is not a trivial process. There are no package repositories, so compiling & installing extra software can be difficult (especially as it's aarch64). However, thankfully, we are able to install a minmial debian environment to get around this.
