@@ -41,7 +41,7 @@ sh -c "$(wget https://raw.githubusercontent.com/Eeems-Org/remarkable-debian-chro
 * Run `debian-chroot` to access, it should say (debian) at the start of the prompt
 
 ```
-# Install prequreistis
+# Install prerequisites
 apt install meson gcc cmake make libdrm-dev libegl1-mesa-dev libgles2-mesa-dev libgbm-dev pkg-config libpng-dev
 git clone https://gitlab.freedesktop.org/mesa/kmscube.git
 cd kmscube
