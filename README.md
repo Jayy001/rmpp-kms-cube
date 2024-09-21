@@ -30,7 +30,7 @@ mkdir /home/root/.local/bin
 export PATH=$PATH:$(pwd)/bins:$(pwd)/repos/localperl/bin:/home/root/.local/bin
 
 # Overwrite busybox wget
-cp wget /usr/bin/wget
+cp bins/wget /usr/bin/wget
 
 # Install debian-chroot
 sh -c "$(wget https://raw.githubusercontent.com/Eeems-Org/remarkable-debian-chroot/master/install.sh -O-)
