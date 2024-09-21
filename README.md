@@ -48,9 +48,21 @@ cd kmscube
 # Build
 meson build
 ninja -C build install
-
-# Run
-kmscube --gears --mode=rgba --nonblocking --surfaceless --format=RG16
 ```
+
+## Running KMSCube
+* Make sure that xochitl is disabled (you'll have to do this outside the chroot)
+```
+systemctl stop xochitl # To stop
+systemctl start xochitl # To start
+```
+* Then to run
+```
+kmscube --gears --mode=rgba --nonblocking --surfaceless --format=RG16 # Full command
+kmscube # No gears
+```
+## Ghosting
+* During running, ghosting will occur a lot
+* The white sphere will eventually go away with enough refreshes (can force this by sleeping the device)
 
 
