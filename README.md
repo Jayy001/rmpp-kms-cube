@@ -42,7 +42,7 @@ sh -c "$(wget https://raw.githubusercontent.com/Eeems-Org/remarkable-debian-chro
 
 ```
 # Install prerequisites
-apt install meson gcc cmake make libdrm-dev libegl1-mesa-dev libgles2-mesa-dev libgbm-dev pkg-config libpng-dev
+apt install git meson gcc cmake make libdrm-dev libegl1-mesa-dev libgles2-mesa-dev libgbm-dev pkg-config libpng-dev
 git clone https://gitlab.freedesktop.org/mesa/kmscube.git
 cd kmscube
 
